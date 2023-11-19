@@ -15,7 +15,7 @@
           </RouterLink>
         </div>
         <div
-          v-if="!country"
+          v-if="country"
           class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-20"
         >
           <!-- Image Country -->
