@@ -78,6 +78,7 @@ function getCountries(params) {
     .catch(function (error) {
       // handle error
       console.log(error);
+      countries.value = [];
     })
     .finally(function () {
       // always executed
