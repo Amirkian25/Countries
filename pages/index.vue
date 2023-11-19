@@ -88,6 +88,7 @@ function getCountries(params) {
 function searchHandel() {
   getCountries();
 }
+useHead({ title: '' })
 onBeforeMount(() => {
   if (route.query.region) {
     region.value = route.query.region;
