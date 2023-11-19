@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-
+import AutoImport from "unplugin-auto-import/vite";
+import { defineConfig } from "vite";
+import { unheadVueComposablesImports } from '@unhead/vue'
+import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-})
+  plugins: [
+    vue(),
+    AutoImport({
+      imports: [unheadVueComposablesImports],
+    }),
+  ],
+});

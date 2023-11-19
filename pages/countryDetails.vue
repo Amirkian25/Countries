@@ -15,7 +15,7 @@
           </RouterLink>
         </div>
         <div
-          v-if="country"
+          v-if="country.cioc"
           class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-20"
         >
           <!-- Image Country -->
@@ -135,6 +135,7 @@ const route = useRoute();
 const router = useRouter();
 const country = ref([]);
 const loading = ref(false);
+
 async function goToPage(params) {
   await router.push(`/${params}`);
   getCountry();
@@ -152,11 +153,13 @@ function getCountry() {
       // handle success
       country.value = response.data[0];
       console.log(country.value);
+      useHead({ title: country.value.name.common })
       loading.value = false;
     })
     .catch(function (error) {
       // handle error
       console.log(error);
+      useHead({ title: 'No country found !' })
     })
     .finally(function () {
       loading.value = false;
