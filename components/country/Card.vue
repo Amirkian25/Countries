@@ -20,12 +20,10 @@
       <div class="flex flex-1 flex-col space-y-5 p-4">
         <h3 class="text-lg font-bold dark:text-whiteThem text-veryDarkBlue">
           <RouterLink :to="`/${country.cioc}`">
-            <!-- :to="`/${cioc}`" -->
             <span aria-hidden="true" class="absolute inset-0" />
             {{ country.name.common }}
           </RouterLink>
         </h3>
-
         <div class="flex flex-1 gap-y-1 flex-col justify-end">
           <p
             class="text-sm font-semibold dark:text-whiteThem text-veryDarkBlue"

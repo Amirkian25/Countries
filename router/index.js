@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../pages/index.vue'
-import countries from '../pages/countries.vue'
 import countryDetails from '../pages/countryDetails.vue'
 
 const router = createRouter({
@@ -11,14 +10,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/countries',
-      name: 'countries',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: countries
     },
     {
         path: '/:id',
