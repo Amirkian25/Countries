@@ -99,7 +99,7 @@
                 >
                   Border Countries :
                 </p>
-                <div class="gap-x-2 flex ">
+                <div class="gap-x-2 flex flex-wrap gap-y-2 ">
                   <button
                     v-for="(item, index) in country.borders"
                     :key="index"

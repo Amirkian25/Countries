@@ -5,7 +5,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between">
         <div class="flex items-center">
-          <h1 class="text-2xl dark:text-whiteThem text-veryDarkBlue font-bold">
+          <h1 class=" text-xl sm:text-2xl dark:text-whiteThem text-veryDarkBlue font-bold">
             Where in the world?
           </h1>
         </div>
