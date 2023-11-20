@@ -19,7 +19,7 @@
       </div>
       <div class="flex flex-1 flex-col space-y-5 p-4">
         <h3 class="text-lg font-bold dark:text-whiteThem text-veryDarkBlue">
-          <RouterLink :to="`/${country.cioc}`">
+          <RouterLink :to="`/countries/${country.cioc}`">
             <span aria-hidden="true" class="absolute inset-0" />
             {{ country.name.common }}
           </RouterLink>
@@ -47,13 +47,11 @@
         </div>
       </div>
     </div>
-    <Empty v-else />
+    <UIEmpty v-else />
   </div>
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
-import Empty from "../UI/Empty.vue";
 const props = defineProps({
   countries: {
     type: Array,
