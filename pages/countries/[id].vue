@@ -146,7 +146,7 @@
   function getCountry() {
     loading.value = true;
     axios
-      .get(`https://restcountries.com/v3.1/alpha/${route.params.id}`)
+      .get(`${import.meta.env.VITE_API_URL}/alpha/${route.params.id}`)
       .then(function (response) {
         // handle success
         country.value = response.data[0];

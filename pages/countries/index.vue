@@ -57,7 +57,7 @@ function getCountries(params) {
   loading.value = true;
   axios
     .get(
-      `https://restcountries.com/v3.1${
+      `${import.meta.env.VITE_API_URL}${
         search.value
           ? `/name/${search.value}`
           : region.value === "all"
